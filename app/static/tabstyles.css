@@ -1,0 +1,167 @@
+/* Individual tab styles */
+
+/*****************************/
+/* Trapezoid, based on http://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
+/*****************************/
+
+.tabs-style-tzoid {
+    max-width: 1200px;
+}
+
+.tabs-style-tzoid nav {
+
+}
+
+.tabs-style-tzoid nav ul li {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tabs-style-tzoid nav ul li a {
+    padding: 0 1.5em 0 0.3em;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+@media screen and (max-width: 54em) {
+    .tabs-style-tzoid nav ul li a {
+        padding: 0 0.5em 0 0.3em;
+    }
+}
+
+.tabs-style-tzoid nav ul li a:hover,
+.tabs-style-tzoid nav ul li a:focus {
+    color: #fff;
+}
+
+.tabs-style-tzoid nav ul li.tab-current a,
+.tabs-style-tzoid nav ul li.tab-current a:hover {
+    color: #90CFE6;
+}
+
+.tabs-style-tzoid nav ul li a span {
+    font-weight: 500;
+    font-size: 0.75em;
+}
+
+.tabs-style-tzoid nav ul li a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    outline: 1px solid transparent;
+    background: #88C3D9;
+    box-shadow: inset 0 -3px 3px rgba(0,0,0,0.05);
+    content: '';
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tabs-style-tzoid nav ul li.tab-current a::after,
+.tabs-style-tzoid .content-wrap {
+    background: #fff;
+    box-shadow: none;
+        margin-top: -2px;
+}
+.tabs nav ul div.menuofftabs{
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.tabs nav ul div.menuofftabs > a{
+    background: white;
+    border-top-left-radius: 10px;
+    padding: 0 0.5em 0 0.3em;
+}
+
+
+@media screen and (min-width: 601px) {
+    .tabs-style-tzoid nav ul li a::after {
+        border-radius: 10px 10px 0 0;
+        -webkit-transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
+        transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 700px) {
+
+    .tabs nav ul div.menuofftabs{
+        display: block;
+        pointer-events: auto;
+    }
+
+    .tabs nav ul li:nth-child(4) {
+        margin-right: 20px;
+    }
+
+    .tabs nav ul div:hover ~  li:nth-child(n+5) {
+        display: block;
+    }
+
+    .tabs nav ul li:nth-child(n+5) {
+        min-width: 100%;
+        display: none;
+    }
+    .tabs nav ul li:nth-child(n+5) a::after  {
+        border-radius: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 800px) {
+
+    .tabs nav ul div.menuofftabs{
+        display: block;
+        pointer-events: auto;
+    }
+
+    .tabs nav ul li:nth-child(6) {
+        margin-right: 20px;
+    }
+
+    .tabs nav ul div:hover ~  li:nth-child(n+7) {
+        display: block;
+    }
+
+    .tabs nav ul li:nth-child(n+7) {
+        min-width: 100%;
+        display: none;
+    }
+    .tabs nav ul li:nth-child(n+7) a::after  {
+        border-radius: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+
+    .tabs nav ul div.menuofftabs{
+        display: block;
+        pointer-events: auto;
+    }
+
+    .tabs nav ul li:nth-child(7) {
+        margin-right: 20px;
+    }
+
+    .tabs nav ul div:hover ~  li:nth-child(n+8) {
+        display: block;
+    }
+
+    .tabs nav ul li:nth-child(n+8) {
+        min-width: 100%;
+        display: none;
+    }
+    .tabs nav ul li:nth-child(n+8) a::after  {
+        border-radius: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
