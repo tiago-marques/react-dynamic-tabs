@@ -24,7 +24,6 @@ export default createReducer(initialState, {
   },
 
   [types.CHANGE_TAB_ORDER](state, { tabsReceive }) {
-    console.log(tabsReceive);
     const newState = state.update('tabs', (tabs) =>
     tabs.map((tab, index) => { 
         if(tab.get("id") !== tabsReceive[index].id){
@@ -32,7 +31,6 @@ export default createReducer(initialState, {
         }
         return tab;
     }));
-    console.log(newState.get('tabs').toJS());
     return newState;
 
   }
