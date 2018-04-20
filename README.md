@@ -1,3 +1,5 @@
+# DEPRECATED
+
 # react-dynamic-tabs
 
 <a href="http://tiago-marques.github.io/react-dynamic-tabs/" target="_blank">Live demo</a>
